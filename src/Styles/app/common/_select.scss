@@ -1,0 +1,28 @@
+.ant-select-arrow {
+  color: $white-color !important;
+}
+
+.ant-select-selector {
+  background-color: transparent !important;
+  color: $white-color;
+}
+
+.selects {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+
+  .right-of-selects {
+    flex-grow: 1;
+
+    &>div {
+      border: 1px solid #565f62;
+      border-radius: 5px;
+      height: 200px !important;
+      width: 400px;
+    }
+  }
+}

@@ -1,0 +1,363 @@
+.accounts-page {
+  .horizon-line {
+    width: 50%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .disabled-accounts-container {
+    margin-top: 30px;
+
+    .disabled-accounts {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  .parent {
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
+    .ant-card-head-title {
+      color: $white-color;
+    }
+
+    .left {
+      flex-grow: 1;
+    }
+
+    .right {
+      min-width: 200px;
+
+      .list-container {
+        border: 1px solid $red-color;
+        border-radius: 5px;
+        padding: 10px;
+
+        ul>li {
+          color: $white-color;
+        }
+      }
+
+      .disabled-lists {
+        color: $red-color;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .users-in-account {
+    position: absolute;
+    background: rgb(19 51 161 / 12%);
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+    z-index: 999;
+    border-radius: 2px;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .account-card-title {
+    text-align: end;
+    color: $white-color;
+    width: 100%;
+    background-color: #13323c;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+
+    .ant-input {
+      &:focus-visible {
+        outline: none !important;
+      }
+
+      background: transparent;
+      border: 1px solid #3083c7;
+      color: white;
+      margin-top: 10px;
+      border-radius: 5px;
+      padding: 7px 20px;
+    }
+  }
+
+  .ant-card-foot {
+    display: flex;
+    padding: 20px 10px;
+    gap: 10px;
+    background-color: #13323c;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    .card-buttons-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+
+      p {
+        color: $white-color;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .account-type {
+    padding: 0 20px;
+
+    .ant-form-item {
+      width: 50%;
+      align-items: center;
+    }
+
+    label {
+      align-items: center;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .button-container {
+    margin-bottom: 10px;
+  }
+
+  .table-containers {
+    .table {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-left: 10px;
+      gap: 10px;
+
+      .ant-input {
+        &:focus-visible {
+          box-shadow: 0 0 0 3px rgb(24 144 255 / 20%);
+          outline: none !important;
+          border: 1px solid #40a9ff;
+        }
+
+        &:hover {
+          box-shadow: 0 0 0 3px rgb(24 144 255 / 20%);
+          border: 1px solid #40a9ff;
+        }
+
+        background: rgba(35, 75, 141, 0.2);
+        border: 1px solid #3083c7;
+        color: white;
+        border-radius: 5px;
+        padding: 7px 20px;
+        width: 300px;
+      }
+    }
+
+    tr td {
+      padding: 6px 15px;
+    }
+  }
+}
+
+.ManageAccount {
+  h4 {
+    color: white;
+    font-size: 110%;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      color: white;
+
+      span {
+        color: white;
+      }
+    }
+  }
+}
+
+.account-card-map {
+  position: relative;
+
+  .dash-box {
+    width: 180px;
+    background: rgba(4, 39, 49, 0.432);
+    top: 10px;
+    right: 10px;
+
+    .each-row {
+      font-size: 12px;
+    }
+  }
+}
+
+.manage-form-making {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+
+  .manage-left {
+    width: 40%
+  }
+
+  .manage-right {
+    width: 60%;
+  }
+
+  .manage-field-label {
+    margin-top: 10px;
+  }
+
+  .manage-right {
+    color: $renderer-color;
+    white-space: wrap;
+
+    textarea {
+      color: $renderer-color;
+    }
+  }
+
+  .add-manage-form {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.pre-value {
+  color: $renderer-color;
+}
+
+.back {
+  label {
+    color: $renderer-color;
+  }
+
+  input {
+    color: $renderer-color;
+  }
+
+  .css-1a1fmpi-MuiInputBase-root-MuiInput-root:before {
+    border-bottom: 1px solid $renderer-color;
+  }
+
+  .css-1a1fmpi-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+    border-bottom: 1px solid $antd-color;
+  }
+}
+
+.css-1s51phu-MuiPopper-root-MuiAutocomplete-popper {
+  background-color: $dark-color !important;
+  background: $dark-color !important;
+}
+
+.MuiTypography-h6 {
+  color: $antd-color;
+  margin: 10px 0 !important;
+}
+
+.MuiSvgIcon-root {
+  color: $renderer-color;
+}
+
+.no-data {
+  color: $renderer-color;
+  font-size: 18px;
+  text-align: center;
+}
+
+.css-1s5lphu-MuiPopper-root-MuiAutocomplete-popper {
+  background-color: $dark-color !important;
+  background: $dark-color !important;
+
+  div {
+    background-color: $dark-color !important;
+    background: $dark-color !important;
+  }
+}
+
+.type-select {
+  width: 100%;
+}
+
+
+.flip-card-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid $white-color;
+
+  p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: $white-color;
+  }
+}
+
+.new-card {
+  background-color: #21373e;
+  border: 1px solid $orange-dark-color;
+  border-radius: 10px;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.15);
+}
+
+
+.flip-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms;
+  height: 670px;
+}
+
+.flip-card .back,
+.flip-card .front {
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.flip-card .back {
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.unshown {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+.edit-bounds-buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .mode-change {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  .bounds-edit {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+}

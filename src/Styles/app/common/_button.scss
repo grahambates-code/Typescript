@@ -1,0 +1,110 @@
+.button-orange-outline {
+  border: 1px solid $orange-color !important;
+  color: $white-color !important;
+  transition: all 0.5s ease;
+  font-size: 20px !important;
+  line-height: 1 !important;
+
+  &:not([disabled]):active,
+  &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    border: 1px solid $orange-hover-color !important;
+    color: $orange-hover-color !important;
+  }
+}
+
+.button-orange-filled {
+  color: $white-color !important;
+  background-color: $orange-dark-color !important;
+  transition: all 0.5s ease;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  border: none !important;
+
+  &[disabled] {
+    background-color: $orange-dark-disable-color !important;
+  }
+
+  &:not([disabled]):active,
+  &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    background-color: $orange-hover-color !important;
+  }
+}
+
+.main-cyan-button {
+  background-color: rgb(66, 92, 139);
+  color: white;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1px solid #40a9ff;
+  }
+}
+
+.btn-small {
+  padding: 3px 10px;
+  font-size: 14px;
+}
+
+.main-danger-button {
+  background-color: $red-color;
+  color: white;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1px solid #fc573a;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.main-orange-button {
+  background-color: $orange-dark-color;
+  color: white;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1px solid $orange-color;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.back-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  width: 100%;
+
+  .back-antd-icon {
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+}

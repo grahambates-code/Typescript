@@ -1,0 +1,131 @@
+@import "../Variables/Variables.scss";
+
+.page-title {
+    font-size: $title-size;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+// login form
+.ant-form-item-control-input-content {
+    flex: auto;
+    max-width: 100%;
+}
+.login-form-button {
+    width: 100%;
+}
+.login-form-forgot {
+    float: right;
+}
+
+// pages
+.signup-img-back {
+    width: 100%;
+    height: 100%;
+    // background-image: url("../../../public/assets/images/tower_clouds.jpg");
+    background-size: cover;
+    background-position: 50%;
+    border-top-right-radius: var($_radius);
+    border-bottom-right-radius: var($_radius);
+}
+
+.avatar-img {
+    border-radius: 2px;
+    width: 100%;
+    height: auto;
+}
+
+.profile-name {
+    display: block;
+    font-size: 1.35em;
+    font-weight: 500;
+    margin: 10px 0 0px 0;
+    text-transform: uppercase;
+}
+
+.medal-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-right: 16px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.medal {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid transparent;
+    margin-right: 4px;
+}
+
+.medal.bronze {
+    box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    border: 1px solid white;
+
+    background-color: $bronze-back-color;
+    background: linear-gradient(45deg, $bronze-color 50%, $bronze-back-color 50%);
+}
+
+.color-text-bronze {
+    color: $bronze-color;
+}
+
+.medal.silver {
+    box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    border: 1px solid white;
+
+    background-color: $silver-back-color;
+    background: linear-gradient(45deg, $silver-color 50%, $silver-back-color 50%);
+    box-shadow: 0 0 8px #ffffff44;
+}
+
+.color-text-silver {
+    color: $silver-color;
+}
+
+.medal.gold {
+    box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    border: 1px solid white;
+
+    background-color: $gold-color;
+    background: linear-gradient(45deg, $gold-color 50%, $gold-back-color 50%);
+    box-shadow: 0 0 8px #ffcb00b3;
+}
+
+.color-text-gold {
+    color: $gold-color;
+}
+
+.ant-table-column-title {
+    padding: 4px 0;
+}
+
+.deaderboard-table-wrapper tbody .ant-table-cell {
+    padding: 4px 8px 2px 8px !important;
+    line-height: 1em;
+    color: $text-muted;
+    .profile-info {
+        margin-top: 4px;
+        .profile-name {
+            font-family: $brand-font;
+            font-size: 0.9em;
+            padding: 0;
+            margin-top: 0;
+            font-weight: 500;
+        }
+    }
+}
+
+.deaderboard-table-wrapper .ant-table-row {
+    cursor: pointer;
+}

@@ -1,0 +1,153 @@
+.page-transaction {
+  .transaction-chart-container {
+    .sub-title {
+      color: $white-color;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    .status-line {
+      width: 100%;
+      margin-top: 30px;
+      .status {
+        display: flex;
+        width: 100%;
+        height: 10px;
+        .plus-status {
+          flex-grow: 1;
+          background-color: $green-color;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+        .minus-status {
+          flex-grow: 1;
+          background-color: $red-color;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+      }
+      .status-letters {
+        display: flex;
+        width: 100%;
+        p {
+          margin-bottom: 0;
+          color: white;
+          text-align: center;
+        }
+        .plus-status {
+          flex-grow: 1;
+        }
+        .minus-status {
+          flex-grow: 1;
+        }
+      }
+    }
+    .transaction-chart {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      .ant-card-body {
+        padding: 0;
+      }
+      .transaction-detail-card {
+        .negative {
+          background-color: $red-color;
+        }
+        .positive {
+          background-color: rgba(10, 239, 218, 0.4);
+        }
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 16px;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          padding: 10px 20px;
+          border-bottom: 1px solid $silver-color;
+          .close {
+            cursor: pointer;
+          }
+        }
+        .card-body {
+          padding: 0px;
+          .heading {
+            margin-bottom: 10px;
+            color: $orange-color;
+            border-bottom: 1px solid $orange-color;
+          }
+          .card-fields {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            .volume {
+              padding: 5px 10px;
+              min-width: 40px;
+              width: 50%;
+              text-align: end;
+            }
+            .timestamp {
+              padding: 5px 10px;
+              width: 50%;
+              // flex-grow: 1;
+            }
+          }
+        }
+        flex-grow: 1;
+        margin: 30px;
+
+        height: fit-content;
+        border-radius: 10px;
+        background-color: $dark-color;
+        color: $white-color;
+      }
+    }
+  }
+  .transaction-table-container {
+    margin-top: 50px;
+    .sub-title {
+      color: $white-color;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    .table {
+      margin-top: 20px;
+      th {
+        color: $orange-color !important;
+      }
+
+      tbody > tr > td {
+        border-bottom: none !important;
+      }
+
+      tbody > tr:hover {
+        border-radius: 10px !important;
+        background-color: #1f3b61 !important;
+        td {
+          background-color: #1f3b61 !important;
+        }
+      }
+      .ant-table {
+        color: $white-color;
+        background: transparent !important;
+      }
+
+      .ant-table-cell {
+        color: $white-color;
+        background: transparent;
+      }
+      .more-icon {
+        cursor: pointer;
+      }
+      .showmore-button-divider {
+        background-color: $dark-border-hover-color;
+      }
+      .showmore-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}

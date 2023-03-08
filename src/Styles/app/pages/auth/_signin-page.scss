@@ -1,0 +1,109 @@
+.page-signin {
+  position: relative;
+  background-image: url('../../../../assets/images/signin.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  height: 100vh;
+  .rt-border {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+
+  .lb-border {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    color: $white-color;
+  }
+
+  .card-main {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid $dark-border-color;
+    border-radius: 8px;
+    padding: 24px;
+    background-color: rgba(236, 242, 255, 0.08);
+
+    .title {
+      text-align: center;
+      color: $white-color;
+    }
+
+    .reset-buttons {
+      margin-top: 20px;
+    }
+
+    .ant-input-affix-wrapper {
+      height: 44px;
+      background-color: transparent;
+      border-color: $dark-border-color;
+      color: white;
+      font-size: 24px;
+    }
+    .ant-input-affix-wrapper:focus {
+      box-shadow: 0 0 0 1px rgb(126 175 221 / 20%);
+      border-color: $dark-border-hover-color;
+    }
+    .ant-input-affix-wrapper-focused {
+      box-shadow: 0 0 0 1px rgb(126 175 221 / 20%);
+    }
+    .ant-input-affix-wrapper > input.ant-input {
+      font-size: 16px;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0);
+      color: $dark-light-color;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px #2d4855 inset !important;
+      -webkit-text-fill-color: $dark-light-color;
+    }
+
+    .ant-input-affix-wrapper .ant-input-prefix {
+      margin: 5px 6px;
+    }
+
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+      border-color: $dark-border-hover-color;
+    }
+
+    .ant-input-affix-wrapper .ant-input-suffix > span {
+      color: white;
+    }
+
+    .ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper {
+      background: none !important;
+    }
+
+    .ant-form-item {
+      margin-top: 24px;
+      margin-bottom: 0px;
+    }
+
+    .forgot-text {
+      color: $orange-color;
+      cursor: pointer;
+      padding: 15px 0;
+      transition: all .2s ease-in;
+      &:hover {
+        color: $orange-hover-color;
+      }
+    }
+    .submit-button {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.manage-account {
+  background-color: $sidebar-color !important;
+  padding-bottom: 0 !important;
+  width: 55% !important;
+
+  @media (max-width: 768px) {
+    width: 100% !important;
+  }
+
+  .ant-modal-body {
+    .role-type {
+      margin: 5px 0;
+    }
+
+    .modal-table {
+      padding: 5px 5px 10px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      border: 1px solid $silver-color;
+
+      .table-title {
+        font-size: 18px;
+        padding: 7px 5px;
+        border-bottom: 1px solid white;
+        color: $white-color;
+      }
+
+      .no-data {
+        text-align: center;
+        color: $orange-dark-color;
+      }
+
+      .list-tr {
+
+        padding: 2px 15px;
+        color: $white-color;
+
+        .lists-name {
+          color: $white-color;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding: 0px 20px;
+          margin: 5px 0;
+
+          .ant-badge {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: $white-color;
+          }
+        }
+
+        .delete-icon {
+          color: $red-color;
+        }
+
+        .edit-icon {
+          color: $orange-color;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .first-containers {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .input-and-select {
+        flex-grow: 1;
+      }
+    }
+
+    .ant-select {
+      width: 200px;
+
+      .ant-select-selector {
+        background-color: $sidebar-color;
+        color: $white-color;
+      }
+
+      .ant-select-arrow {
+        color: $white-color;
+      }
+    }
+
+    border: 1px solid $silver-color;
+
+    .ant-collapse-header {
+      background-color: $sidebar-color;
+
+      .ant-collapse-expand-icon {
+        color: $white-color;
+      }
+
+      .ant-collapse-header-text {
+        color: $white-color;
+      }
+    }
+
+    .ant-collapse-content {
+      background-color: $sidebar-color;
+      border-top: 1px solid $silver-color !important;
+    }
+
+    .drawer-label {
+      margin-bottom: 0;
+      color: $white-color;
+      margin-top: 10px;
+    }
+
+    .input-contain {
+      margin-top: 10px;
+      gap: 10px;
+      align-items: center;
+
+      p {
+        margin-top: 0;
+      }
+    }
+
+    .account-label {
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.ant-form-item-control-input-content {
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    max-width: 100%;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.signup-img-back {
+    width: 100%;
+    height: 100%;
+    /* background-image: url("../../../public/assets/images/tower_clouds.jpg"); */
+    background-size: cover;
+    background-position: 50%;
+    border-top-right-radius: var(2px);
+    border-bottom-right-radius: var(2px);
+}
+
+.avatar-img {
+    border-radius: 2px;
+    width: 100%;
+    height: auto;
+}
+
+.profile-name {
+    display: block;
+    font-size: 1.35em;
+    font-weight: 500;
+    margin: 10px 0 0px 0;
+    text-transform: uppercase;
+}
+
+.medal-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-right: 16px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.medal {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border: 1px solid transparent;
+    margin-right: 4px;
+}
+
+.medal.bronze {
+    -webkit-box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    border: 1px solid white;
+    background-color: #e8a06d;
+    background: linear-gradient(45deg, #9b4b01 50%, #e8a06d 50%);
+}
+
+.color-text-bronze {
+    color: #9b4b01;
+}
+
+.medal.silver {
+    -webkit-box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    border: 1px solid white;
+    background-color: silver;
+    background: linear-gradient(45deg, gray 50%, silver 50%);
+    -webkit-box-shadow: 0 0 8px #ffffff44;
+    box-shadow: 0 0 8px #ffffff44;
+}
+
+.color-text-silver {
+    color: gray;
+}
+
+.medal.gold {
+    -webkit-box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    box-shadow: 0px 0 4px #7900ff, 0px 0 0px 1px #7900ff !important;
+    border: 1px solid white;
+    background-color: orange;
+    background: linear-gradient(45deg, orange 50%, gold 50%);
+    -webkit-box-shadow: 0 0 8px #ffcb00b3;
+    box-shadow: 0 0 8px #ffcb00b3;
+}
+
+.color-text-gold {
+    color: orange;
+}
+
+.ant-table-column-title {
+    padding: 4px 0;
+}
+
+.deaderboard-table-wrapper tbody .ant-table-cell {
+    padding: 4px 8px 2px 8px !important;
+    line-height: 1em;
+    color: #6c757d;
+}
+
+.deaderboard-table-wrapper tbody .ant-table-cell .profile-info {
+    margin-top: 4px;
+}
+
+.deaderboard-table-wrapper tbody .ant-table-cell .profile-info .profile-name {
+    font-family: erbaum, roboto, sans-serif;
+    font-size: 0.9em;
+    padding: 0;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.deaderboard-table-wrapper .ant-table-row {
+    cursor: pointer;
+}

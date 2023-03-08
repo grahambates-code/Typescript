@@ -1,0 +1,177 @@
+.continue-modal {
+    .header {
+        font-size: 20px;
+        border-bottom: 1px solid $silver-color;
+        padding: 10px 20px;
+        color: $white-color;
+    }
+
+    .content {
+        font-size: 18px;
+        color: $white-color;
+        text-align: center;
+    }
+
+    .buttons-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 50px;
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.ant-modal {
+    .ant-input {
+        &:focus-visible {
+            outline: none !important;
+        }
+
+        background: transparent;
+        border: 1px solid #3083c7;
+        color: white;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 7px 20px;
+    }
+
+    .ant-select {
+        width: 200px;
+
+        .ant-select-selector {
+            background-color: $sidebar-color;
+            color: $white-color;
+        }
+
+        .ant-select-arrow {
+            color: $white-color;
+        }
+    }
+
+    .ant-drawer-header {
+        background-color: $sidebar-color !important;
+        border-bottom: 1px solid $orange-color;
+
+        .ant-drawer-header-title {
+            button {
+                color: $white-color !important;
+            }
+        }
+
+        .ant-drawer-title {
+            color: $white-color;
+        }
+    }
+}
+
+.account-adding-modal {
+    .ant-checkbox-wrapper {
+        .ant-checkbox-inner {
+            background-color: $orange-dark-color !important;
+            border-color: $orange-dark-color !important;
+        }
+
+        &>span {
+            color: $dark-light-color !important;
+        }
+    }
+
+    .divider {
+        border-top: 1px solid $silver-color;
+    }
+
+    .ant-modal-header {
+        background-color: #0c323e;
+        border-bottom: 1px solid $orange-color;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        div {
+            color: $white-color;
+        }
+    }
+
+    .input-and-select {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        justify-content: space-between;
+
+        input {
+            margin-top: 0;
+            width: 250px;
+        }
+
+        .ant-select {
+            width: 200px;
+
+            .ant-select-arrow {
+                color: $white-color;
+            }
+        }
+    }
+
+    .add-device-button {
+        width: 100%;
+    }
+
+    .device-buttons-container {
+        width: 100%;
+
+        button {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
+.account-card-modal {
+    padding: 20px !important;
+
+    .ant-modal-body {
+        padding: 50px 20px 20px;
+
+        .adding-button {
+            margin-top: 10px;
+        }
+    }
+
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.ant-modal-content {
+    background-color: $dark-color !important;
+    border-radius: 10px !important;
+
+    .ant-modal-close {
+        color: white;
+    }
+
+    .account-label {
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .ant-input {
+        &:focus-visible {
+            outline: none !important;
+        }
+
+        background: transparent;
+        border: 1px solid #3083c7;
+        color: white;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 7px 20px;
+    }
+}

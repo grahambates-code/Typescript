@@ -1,0 +1,39 @@
+
+.ant-layout-content {
+  background-color: #123540 !important;
+  background: linear-gradient(143.87deg, rgba(11, 10, 10, 0.17) 6.29%, rgba(121, 118, 118, 0.03) 82.07%);
+  padding: 50px 50px;
+  min-height: 100vh !important;
+  @media (max-width: 992px) {
+    padding: 50px 25px;
+  }
+  .main-title {
+    color: $white-color;
+  }
+  .node-container {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    .node {
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      width: 65px;
+      height: 65px;
+      border-radius: 16px;
+      border: 0.5px solid rgba(249, 99, 0, 0.27);
+      background: linear-gradient(143.87deg, rgba(254, 254, 254, 0.17) 6.29%, rgba(255, 255, 255, 0.03) 82.07%);
+      p {
+        color: $white-color;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

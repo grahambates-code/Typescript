@@ -1,0 +1,78 @@
+.page-welcome {
+  position: relative;
+  background-image: url('../../../../assets/images/main.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0c323e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 45px;
+  height: 100vh;
+
+  .rt-border {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+
+  .lb-border {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    color: $white-color;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .logo {
+      width: 480px;
+      height: 166px;
+      opacity: 0.6;
+      @media (max-width: 768px) {
+        width: 280px;
+      }
+    }
+
+    .welcome-title {
+      color: $white-color;
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
+
+    .signin-button {
+      width: 200px;
+    }
+  }
+
+  .card-container {
+    .welcome-card {
+      p {
+        width: 290px;
+        color: $white-color;
+        text-align: center;
+        border: 2px solid #183b40;
+        padding: 8px 10px;
+        margin: 0;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        span {
+          color: #3d6f64;
+        }
+      }
+    }
+  }
+}
