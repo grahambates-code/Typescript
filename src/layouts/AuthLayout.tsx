@@ -1,26 +1,21 @@
 import React from "react";
-import { Typography } from "antd";
-import LeftBottomBorder from "../assets/images/left-bottom-border.png";
-import RightTopBorder from "../assets/images/right-top-border.png";
+import { Outlet } from "react-router-dom";
+import { Text } from "@mantine/core";
 import moment from "moment";
 
-const { Text } = Typography;
-
-const AuthLayout = (props: React.AllHTMLAttributes<HTMLElement>) => {
-  const { children } = props;
-
+const AuthLayout = () => {
   const thisYear = moment().format("yyyy");
 
   return (
     <div className="page page-signin">
-      <img src={RightTopBorder} alt="right-top-border" className="rt-border" />
       <img
-        src={LeftBottomBorder}
+        src="images/left-bottom-border.png"
         alt="left-bottom-border"
         className="lb-border"
       />
       <Text className="copyright">&copy; Copyright {thisYear}</Text>
-      {children}
+
+      <Outlet />
     </div>
   );
 };

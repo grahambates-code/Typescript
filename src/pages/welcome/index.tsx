@@ -1,14 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Typography, Button } from "antd";
-
-import LeftBottomBorder from "../../assets/images/left-bottom-border.png";
-import RightTopBorder from "../../assets/images/right-top-border.png";
+import { Button, Text, Title } from "@mantine/core";
 import moment from "moment";
 
 import "../../Styles/scss/pages.scss";
-
-const { Title, Text } = Typography;
 
 const WelcomePage = () => {
   const navigate = useNavigate();
@@ -19,24 +14,28 @@ const WelcomePage = () => {
 
   return (
     <div className="page page-welcome">
-      <img src={RightTopBorder} alt="right-top-border" className="rt-border" />
       <img
-        src={LeftBottomBorder}
+        src="images/left-bottom-border.png"
+        alt="right-top-border"
+        className="rt-border"
+      />
+      <img
+        src="images/right-top-border.png"
         alt="left-bottom-border"
         className="lb-border"
       />
 
-      <Text className="copyright">&copy; Copyright {moment().format("yyyy")}</Text>
+      <Text className="copyright">
+        &copy; Copyright {moment().format("yyyy")}
+      </Text>
 
       <div className="logo-container">
-        <div></div>
-        <Title className="welcome-title" level={1}>
+        <Title className="welcome-title" order={1}>
           Omega Crop
         </Title>
         <Button
-          ghost
-          className="signin-button button-orange-outline"
-          size="large"
+          variant="gradient"
+          gradient={{ from: "indigo", to: "cyan" }}
           onClick={toSignin}
         >
           Sign In

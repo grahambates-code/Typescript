@@ -1,15 +1,8 @@
 import React from "react";
-import { Spin } from "antd";
+import { Loader } from '@mantine/core';
 
-interface ILoading {
-  children?: React.ReactElement;
-  loading?: boolean;
-}
-
-const Loading = (props: ILoading) => {
-  const { children, loading } = props;
-
-  return <Spin spinning={loading}>{children}</Spin>;
+const Loading = () => {
+  return <Loader size="md" />;
 };
 
 export default Loading;

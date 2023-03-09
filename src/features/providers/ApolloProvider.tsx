@@ -39,7 +39,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const _ApolloProvider = ({ children }: { children: React.ReactElement }) => {
+const ApolloProviderWrap = ({ children }: { children: React.ReactElement }) => {
   const token = useSelector((state: ApplicationState) => state.auth.userToken);
 
   //if not authed, return the public routes passed through the children prop.
@@ -54,4 +54,4 @@ const _ApolloProvider = ({ children }: { children: React.ReactElement }) => {
   );
 };
 
-export { client, _ApolloProvider };
+export { client, ApolloProviderWrap };

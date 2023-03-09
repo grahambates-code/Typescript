@@ -1,23 +1,10 @@
 import React, { useMemo } from "react";
 import { Navigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import MainLayout from "../layouts/MainLayout";
-import { gql } from "@apollo/client";
+import { useSelector } from "react-redux";
 
 import { ApplicationState } from "../store";
 
-const GET_USER = gql`
-  query ($account_id: uuid, $user_id: uuid) {
-    table_user(where: { user_id: { _eq: $user_id } }) {
-      user_id
-      terms_agreed
-    }
-  }
-`;
-
 const PrivateRoute = ({ children }: { children: React.ReactElement }) => {
-  const dispatch = useDispatch();
-
   const isLoggedin = true;
 
   const userToken = useSelector(
@@ -44,7 +31,7 @@ const PrivateRoute = ({ children }: { children: React.ReactElement }) => {
     userToken &&
     ((isAdmin && accountterms_agreed) || !isAdmin)
   ) {
-    return <MainLayout>{children}</MainLayout>;
+    return <>{children}</>;
   } else if (isLoggedin && userToken && !userterms_agreed) {
     return <Navigate to="/general-terms" />;
   } else if (

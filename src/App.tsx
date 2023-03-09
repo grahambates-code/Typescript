@@ -6,10 +6,9 @@ import { ApplicationState } from "./store";
 import { Store } from "redux";
 import { History } from "history";
 import Routes from "./routes/Router";
-import { _ApolloProvider } from "./features/providers/ApolloProvider";
+import { ApolloProviderWrap } from "./features/providers/ApolloProvider";
 import i18n from "./features/services/i18n.service";
-
-import 'antd/dist/reset.css';
+import { MantineProvider } from "@mantine/core";
 
 interface MainProps {
   store: Store<ApplicationState>;
@@ -18,15 +17,17 @@ interface MainProps {
 
 const App: React.FC<MainProps> = ({ store }) => {
   return (
-    <BrowserRouter>
-      <I18nextProvider i18n={i18n}>
-        <Provider store={store}>
-          <_ApolloProvider>
-            <Routes />
-          </_ApolloProvider>
-        </Provider>
-      </I18nextProvider>
-    </BrowserRouter>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <BrowserRouter>
+        <I18nextProvider i18n={i18n}>
+          <Provider store={store}>
+            <ApolloProviderWrap>
+              <Routes />
+            </ApolloProviderWrap>
+          </Provider>
+        </I18nextProvider>
+      </BrowserRouter>
+    </MantineProvider>
   );
 };
 
