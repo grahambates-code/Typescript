@@ -1,10 +1,10 @@
-import React, { useMemo } from "react";
-import { Navigate } from "react-router-dom";
+import React, { FunctionComponent, useMemo } from "react";
 import { useSelector } from "react-redux";
 
 import { ApplicationState } from "../store";
 
-const PrivateRoute = ({ children }: { children: React.ReactElement }) => {
+// @ts-ignore
+const  PrivateRoute: FunctionComponent = (props : any) => {
   const isLoggedin = true;
 
   const userToken = useSelector(
@@ -20,30 +20,10 @@ const PrivateRoute = ({ children }: { children: React.ReactElement }) => {
     }
   }, [userInfo, userToken]);
 
-  //we only allow routing if terms are agreed
-  const userterms_agreed = true;
-  const accountterms_agreed = true;
-  const isAdmin = true;
-
   if (
-    isLoggedin &&
-    userterms_agreed &&
-    userToken &&
-    ((isAdmin && accountterms_agreed) || !isAdmin)
+    isLoggedin
   ) {
-    return <>{children}</>;
-  } else if (isLoggedin && userToken && !userterms_agreed) {
-    return <Navigate to="/general-terms" />;
-  } else if (
-    isLoggedin &&
-    userToken &&
-    userterms_agreed &&
-    isAdmin &&
-    !accountterms_agreed
-  ) {
-    return <Navigate to="/account-terms" />;
-  } else {
-    return <Navigate to="/signin" />;
+    return <>{props.children}</>;
   }
 };
 

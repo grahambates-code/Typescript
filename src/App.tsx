@@ -6,10 +6,11 @@ import { ApplicationState } from "./store";
 import { Store } from "redux";
 import { History } from "history";
 import Routes from "./routes/Router";
-import { ApolloProviderWrap } from "./features/providers/ApolloProvider";
+import _ApolloProvider from "./features/providers/ApolloProvider";
 import i18n from "./features/services/i18n.service";
 import { MantineProvider } from "@mantine/core";
-
+import { TypographyStylesProvider } from '@mantine/core';
+import Header from './components/Header';
 interface MainProps {
   store: Store<ApplicationState>;
   history: History;
@@ -17,16 +18,19 @@ interface MainProps {
 
 const App: React.FC<MainProps> = ({ store }) => {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider theme={{ colorScheme: 'dark' }} withGlobalStyles withNormalizeCSS>
+      <TypographyStylesProvider>
       <BrowserRouter>
         <I18nextProvider i18n={i18n}>
           <Provider store={store}>
-            <ApolloProviderWrap>
+            <_ApolloProvider>
+              <Header/>
               <Routes />
-            </ApolloProviderWrap>
+            </_ApolloProvider>
           </Provider>
         </I18nextProvider>
       </BrowserRouter>
+      </TypographyStylesProvider>
     </MantineProvider>
   );
 };

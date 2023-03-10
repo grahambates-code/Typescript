@@ -1,57 +1,39 @@
-import {
-  ApolloProvider,
-  ApolloClient,
-  createHttpLink,
-  InMemoryCache,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
-import React from "react";
-import { useSelector } from "react-redux";
+import { ApolloProvider, ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import jwt_decode from "jwt-decode";
+import React from 'react';
 
-import { ApplicationState } from "../../store";
+// @ts-ignore
+const AapolloProvider = ({children}) => {
 
-const httpLink = createHttpLink({
-  uri: process.env.REACT_APP_BASE_URI + "/v1/graphql",
-});
-
-//however if we have a token, build the auth headers for the gql request
-const authLink = setContext((_, { headers }) => {
-  let roles = ["guest"];
-
-  // try {
-  //   roles = JSON.parse(jwt_decode(token)['https://hasura.io/jwt/claims'])['x-hasura-allowed-roles'];
-  // } catch (e) {
-  //   console.log(e)
-  // }
-
-  return {
-    headers: {
-      ...headers,
-      // authorization: `Bearer ${token}`,
-      "x-hasura-admin-secret": "secret",
-      "x-hasura-role": roles[roles.length - 1], //roles are defined in cognito hook with highest permission last.
-    },
-  };
-});
-
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
-
-const ApolloProviderWrap = ({ children }: { children: React.ReactElement }) => {
-  const token = useSelector((state: ApplicationState) => state.auth.userToken);
+  const httpLink = createHttpLink({ uri: process.env.REACT_APP_BASE_URI + "/v1/graphql" });
+  const token = sessionStorage.getItem('userToken');
 
   //if not authed, return the public routes passed through the children prop.
-  if (!token) {
-    return children;
-  }
+  if (!token) return children;
 
-  return (
-    <>
-      <ApolloProvider client={client}>{children}</ApolloProvider>
-    </>
-  );
-};
+  //however if we have a token, build the auth headers for the gql request
+  const authLink = setContext((_, { headers }) => {
 
-export { client, ApolloProviderWrap };
+    console.log((((jwt_decode(token)))));
+
+    return {
+      headers: {
+        ...headers,
+        authorization: `Bearer ${token}`,
+        'x-hasura-admin-secret' : 'secret',
+      }
+    }
+  });
+
+  const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache()
+  });
+
+  return <ApolloProvider client={client}>
+    {children}
+  </ApolloProvider>
+}
+
+export default AapolloProvider;

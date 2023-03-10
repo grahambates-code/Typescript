@@ -1,7 +1,26 @@
-import React from "react";
+import React, { FunctionComponent } from 'react';
+import { gql, useQuery } from '@apollo/client';
 
-const FieldPage = () => {
-  return <h1>Welcome to Field Page! Coming soon...</h1>;
-};
+const LIST_FieldS = gql`
+  query{
+  table_field{
+    id
+  }
+}
+`;
 
-export default FieldPage;
+const Page: FunctionComponent = () => {
+
+  const { loading, error, data } = useQuery(LIST_FieldS, {
+    variables: {}
+  });
+
+  if (!data || loading) return <div>no data</div>;
+  if (error) return <div>error</div>
+
+  return <div>
+    {JSON.stringify(data)}
+  </div>
+}
+
+export default Page;
